@@ -1,50 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
-  
-  
-    <meta name="description" content="Personal Blog">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>
-    
-    Smiley</title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-  
-  <script src="/js/pace.min.js"></script>
-</head>
-</html>
-<body>
-<main class="content">
-  <section class="outer">
-  <article id="post-Hexo-Github构建个人博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-
-    
-      <div class="article-meta">
-        <a href="/2019/07/18/Hexo-Github构建个人博客/" class="article-date">
-  <time datetime="2019-07-18T11:40:53.707Z" itemprop="datePublished">2019-07-18</time>
-</a>
-        
-      </div>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-      
-
-      
-        <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Personal Blog"><meta name="keywords" content><meta name="author" content="Smiley"><meta name="copyright" content="Smiley"><title>Smiley</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">1.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Hexo?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-Github发文原理"><span class="toc-number">1.1.1.</span> <span class="toc-text">Hexo+Github发文原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.2.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">1.2.1.</span> <span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Github创建仓库"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">Github创建仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">1.3.</span> <span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#config-yml"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">_config.yml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scaffolds"><span class="toc-number">1.3.0.3.</span> <span class="toc-text">scaffolds</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#source"><span class="toc-number">1.3.0.4.</span> <span class="toc-text">source</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#themes"><span class="toc-number">1.3.0.5.</span> <span class="toc-text">themes</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将Hexo与Github联接起来"><span class="toc-number">1.4.</span> <span class="toc-text">将Hexo与Github联接起来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git"><span class="toc-number">1.4.1.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deployment"><span class="toc-number">1.4.2.</span> <span class="toc-text">Deployment</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo主题"><span class="toc-number">1.5.</span> <span class="toc-text">Hexo主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo常用命令"><span class="toc-number">1.6.</span> <span class="toc-text">Hexo常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.7.</span> <span class="toc-text">注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何在markdown加入图片"><span class="toc-number">1.7.1.</span> <span class="toc-text">如何在markdown加入图片</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#你想输入的替代文字-xxx-图片名-jpg"><span class="toc-number">1.7.1.0.1.</span> <span class="toc-text">![你想输入的替代文字] (xxx/图片名.jpg)</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">Smiley</div><div class="author-info__description text-center">Personal Blog</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Smiley</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">无题</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-07-18</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
 <hr>
 <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h2><blockquote>
 <p><strong>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</strong></p>
@@ -57,7 +20,6 @@
 </ul>
 <h4 id="Github创建仓库"><a href="#Github创建仓库" class="headerlink" title="Github创建仓库"></a>Github创建仓库</h4><p>建立与用户名对应的仓库，仓库名必须为[username.github.io]。</p>
 <p><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Github%E4%BB%93%E5%BA%93.png" alt="Github仓库"></p>
-<p>建立好后<br><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Github%E9%A1%B5%E9%9D%A2.png" alt="Github页面"></p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在本地创建一个文件夹。</p>
 <p>进入命令行</p>
 <blockquote>
@@ -104,6 +66,7 @@
 <p>执行命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+<p>成功后Github仓库<br><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Github%E9%A1%B5%E9%9D%A2.png" alt="Github页面"></p>
 <blockquote>
 <p>浏览器输入<a href="http://WSmiley.github.io/">http://WSmiley.github.io/</a></p>
 </blockquote>
@@ -134,6 +97,9 @@
 <blockquote>
 <p>post_asset_folder:true</p>
 </blockquote>
+<p>_config.yml 里修改URL避免github中图片引用路径出现问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">##If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; &gt;and root as &apos;/child/&apos;</span><br><span class="line">url: http://wsmiley.github.io</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure>
+
 <p>在你的hexo目录下执行</p>
 <blockquote>
 <p>npm install hexo-asset-image –save</p>
@@ -143,123 +109,7 @@
 <p>hexo n “xxx”</p>
 </blockquote>
 <p>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
-<h5 id="你想输入的替代文字-xxx-图片名-jpg"><a href="#你想输入的替代文字-xxx-图片名-jpg" class="headerlink" title="![你想输入的替代文字] (xxx/图片名.jpg)"></a>![你想输入的替代文字] (xxx/图片名.jpg)</h5>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/" data-id="cjy8ngrzw0000bkuu18xhi6lw"
-         class="article-share-link">Share</a>
-      
-    </footer>
-
-  </div>
-
-  
-    
-
-  
-
-  
-    
-  
-
-</article>
-
-
-
-</section>
-  <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>&copy; 2019 Smiley</li>
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
-    </ul>
-  </div>
-</footer>
-
-</main>
-<aside class="sidebar">
-  <button class="navbar-toggle"></button>
-
-<nav class="navbar">
-  
-    <div class="logo">
-      <a href="/"><img src="/images/hexo.svg" alt="Smiley"></a>
-    </div>
-  
-  <ul class="nav nav-main">
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/">Home</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/archives">Archives</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/gallery">Gallery</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/about">About</a>
-      </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="Search">
-        <i class="fe fe-search"></i>
-        Search
-      </a>
-    </li>
-  </ul>
-</nav>
-
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-          <i class="fe fe-feed"></i>
-        </a>
-      
-    </li>
-  </ul>
-</nav>
-
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-</aside>
-<script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/lazyload.min.js"></script>
-<script src="/js/snap.svg-min.js"></script>
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-  <script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/ocean.js"></script>
-
-</body>
-</html>
+<h5 id="你想输入的替代文字-xxx-图片名-jpg"><a href="#你想输入的替代文字-xxx-图片名-jpg" class="headerlink" title="![你想输入的替代文字] (xxx/图片名.jpg)"></a>![你想输入的替代文字] (xxx/图片名.jpg)</h5></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Smiley</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/">http://wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wsmiley.github.io">Smiley</a>！</span></div></div><div class="post-meta__tag-list"></div><nav id="pagination"></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2019 By Smiley</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
