@@ -85,14 +85,14 @@
 <p><strong>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</strong></p>
 </blockquote>
 <hr>
-<h3 id="Hexo-Github发文原理"><a href="#Hexo-Github发文原理" class="headerlink" title="Hexo+Github发文原理"></a>Hexo+Github发文原理</h3><h2 id><a href="#" class="headerlink" title></a><img src="/.com//Hexo%E5%8F%91%E6%96%87%E5%8E%9F%E7%90%86.png" alt="Hexo发文原理"></h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a><strong>环境搭建</strong></h3><ul>
+<h3 id="Hexo-Github发文原理"><a href="#Hexo-Github发文原理" class="headerlink" title="Hexo+Github发文原理"></a>Hexo+Github发文原理</h3><h2 id><a href="#" class="headerlink" title></a><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Hexo%E5%8F%91%E6%96%87%E5%8E%9F%E7%90%86.png" alt="Hexo发文原理"></h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a><strong>环境搭建</strong></h3><ul>
 <li>Node.js       <a href="https://nodejs.org/" target="_blank" rel="noopener">https://nodejs.org/</a></li>
 <li>Git         <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
 <li>Github账号  <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></li>
 </ul>
 <h4 id="Github创建仓库"><a href="#Github创建仓库" class="headerlink" title="Github创建仓库"></a>Github创建仓库</h4><p>建立与用户名对应的仓库，仓库名必须为[username.github.io]。</p>
-<p><img src="/.com//Github%E4%BB%93%E5%BA%93.png" alt="Github仓库"></p>
-<p>建立好后<br><img src="/.com//Github%E9%A1%B5%E9%9D%A2.png" alt="Github页面"></p>
+<p><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Github%E4%BB%93%E5%BA%93.png" alt="Github仓库"></p>
+<p>建立好后<br><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/Github%E9%A1%B5%E9%9D%A2.png" alt="Github页面"></p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在本地创建一个文件夹。</p>
 <p>进入命令行</p>
 <blockquote>
@@ -107,7 +107,7 @@
 <p>指定文件夹的目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//hexo%E5%91%BD%E4%BB%A4.png" alt="hexo命令"></p>
+<p><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/hexo%E5%91%BD%E4%BB%A4.png" alt="hexo命令"></p>
 <h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>网站的 配置 信息，您可以在此配置大部分的参数。</p>
 <h4 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h4><p>应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.8.0&quot;,</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.5&quot;,</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.3&quot;,</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.2.1&quot;,</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.2.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.3.1&quot;,</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.3.3&quot;,</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.3.2&quot;,</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.3.3&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -119,7 +119,7 @@
 <blockquote>
 <p>在hexo init目录下<br><br>$ hexo server     //在本地起一个server</p>
 </blockquote>
-<p><img src="/.com//hexoserver%E5%91%BD%E4%BB%A4.png" alt="hexoserver命令"></p>
+<p><img src="//wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/hexoserver%E5%91%BD%E4%BB%A4.png" alt="hexoserver命令"></p>
 <p>在chrome输入localhost:4000,可看到配置好的Hexo页面</p>
 <h2 id="将Hexo与Github联接起来"><a href="#将Hexo与Github联接起来" class="headerlink" title="将Hexo与Github联接起来"></a>将Hexo与Github联接起来</h2><ul>
 <li>配置Git</li>
@@ -140,7 +140,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>浏览器输入<a href="http://WSmiley.github.io/" target="_blank" rel="noopener">http://WSmiley.github.io/</a></p>
+<p>浏览器输入<a href="http://WSmiley.github.io/">http://WSmiley.github.io/</a></p>
 </blockquote>
 <h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>执行如下命令</p>
 <blockquote>
@@ -182,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/18/Hexo-Github构建个人博客/" data-id="cjy8msqyg0000xcuu505gwlb5"
+      <a data-url="http://wsmiley.github.io/2019/07/18/Hexo-Github构建个人博客/" data-id="cjy8ngrzw0000bkuu18xhi6lw"
          class="article-share-link">Share</a>
       
     </footer>
@@ -211,6 +211,8 @@
       <ul class="list-inline">
   
     <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
   
 </ul>
     </div>
