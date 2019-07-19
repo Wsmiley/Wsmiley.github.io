@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Raspberrypi"><meta name="keywords" content><meta name="author" content="Smiley"><meta name="copyright" content="Smiley"><title>Raspberrypi | Smiley</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Raspberry"><span class="toc-number">1.</span> <span class="toc-text">Raspberry</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#无屏幕-boot配置wifi"><span class="toc-number">1.1.</span> <span class="toc-text">无屏幕/boot配置wifi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换源"><span class="toc-number">1.2.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vsftpd搭载FPT服务器"><span class="toc-number">1.3.</span> <span class="toc-text">vsftpd搭载FPT服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Samba共享"><span class="toc-number">1.4.</span> <span class="toc-text">Samba共享</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试配置文件是否有错误，根据提示做相应修改"><span class="toc-number">1.4.1.</span> <span class="toc-text">测试配置文件是否有错误，根据提示做相应修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内网穿透——公网ssh访问树莓派——frp-VPS"><span class="toc-number">1.5.</span> <span class="toc-text">内网穿透——公网ssh访问树莓派——frp+VPS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器端"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">服务器端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端"><span class="toc-number">1.5.0.2.</span> <span class="toc-text">客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开机自启"><span class="toc-number">1.5.1.</span> <span class="toc-text">开机自启</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端-1"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器端-1"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">服务器端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker"><span class="toc-number">1.6.</span> <span class="toc-text">docker</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://pic1.zhimg.com/80/v2-93c69135458d22e2d4c0ccce15bc4963_hd.jpg"></div><div class="author-info__name text-center">Smiley</div><div class="author-info__description text-center">Personal Blog</div><div class="follow-button"><a href="https://github.com/Wsmiley">Follw Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">6</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://pic1.zhimg.com/80/v2-d18ff3d84c99c26eb8162be708d4f462_hd.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Smiley</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">Raspberrypi</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-07-19</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Raspberry"><a href="#Raspberry" class="headerlink" title="Raspberry"></a>Raspberry</h1><blockquote>
+<p>不久前买个一个Raspberry,记录一些Raspberry的基本配置</p>
+</blockquote>
+<hr>
+<h2 id="无屏幕-boot配置wifi"><a href="#无屏幕-boot配置wifi" class="headerlink" title="无屏幕/boot配置wifi"></a>无屏幕/boot配置wifi</h2><p>新建 wpa_supplicant.conf 文件，按下面格式保存</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1 </span><br><span class="line">network=&#123;</span><br><span class="line">ssid=&quot;WiFi-A&quot; #ssid:网络的ssid</span><br><span class="line">psk=&quot;12345678&quot; #psk:密码</span><br><span class="line">key_mgmt=WPA-PSK </span><br><span class="line">priority=1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h2><blockquote>
+<p>sudo vim /etc/apt/sources.list.d/raspi.list<br><br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/</a> stretch main ui</p>
+</blockquote>
+<blockquote>
+<p>sudo vim /etc/apt/sources.list</p>
+</blockquote>
+<blockquote>
+<p>deb <a href="http://mirrors.aliyun.com/raspbian/raspbian/" target="_blank" rel="noopener">http://mirrors.aliyun.com/raspbian/raspbian/</a> stretch main contrib non-free rpi<br><br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> stretch main contrib non-free rpi</p>
+</blockquote>
+<blockquote>
+<p>sudo apt-get update</p>
+</blockquote>
+<blockquote>
+<p>sudo apt-get upgrade</p>
+</blockquote>
+<hr>
+<h2 id="vsftpd搭载FPT服务器"><a href="#vsftpd搭载FPT服务器" class="headerlink" title="vsftpd搭载FPT服务器"></a>vsftpd搭载FPT服务器</h2><p>安装vsftpd</p>
+<blockquote>
+<p>sudo apt-get install vsftpd</p>
+</blockquote>
+<p>开启FTP服务</p>
+<blockquote>
+<p>sudo service vsftpd start</p>
+</blockquote>
+<p>修改vsftpd配置文件</p>
+<blockquote>
+<p>sudo vim /etc/vsftpd.conf</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">anonymous_enable=YES   #匿名用户使能，允许匿名用户访问</span><br><span class="line">anon_root=/home/pi/ftpServer  #服务器的共享目录，需要自己创建</span><br><span class="line">no_anon_password=YES   # 匿名用户登录不需要密码</span><br><span class="line">write_enable=YES   #允许匿名用户进行写操作</span><br><span class="line">anon_upload_enable=YES   #允许匿名用户上传</span><br><span class="line">anon_mkdir_write_enable=YES   #允许匿名用户创建目录</span><br></pre></td></tr></table></figure>
+
+<p>重启vsftpd服务</p>
+<blockquote>
+<p>sudo service vsftpd restart</p>
+</blockquote>
+<p>加入开机启动中：</p>
+<blockquote>
+<p>sudo vim /etc/rc.local<br>添加/etc/init.d/vsftpd restart</p>
+</blockquote>
+<hr>
+<h2 id="Samba共享"><a href="#Samba共享" class="headerlink" title="Samba共享"></a>Samba共享</h2><p>安装samba所需软件</p>
+<blockquote>
+<p>sudo apt-get install samba samba-common-bin</p>
+</blockquote>
+<blockquote>
+<p>sudo vim /etc/samba/smb.conf</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在末尾加入如下内容</span><br><span class="line"># 分享名称</span><br><span class="line">[MyNAS]</span><br><span class="line">    # 说明信息</span><br><span class="line">    comment = NAS Storage</span><br><span class="line">    # 可以访问的用户</span><br><span class="line">    valid users = pi,root</span><br><span class="line">    # 共享文件的路径,raspberry pi 会自动将连接到其上的外接存储设备挂载到/media/pi/目录下。</span><br><span class="line">    path = /home/pi/</span><br><span class="line">    # 可被其他人看到资源名称（非内容）</span><br><span class="line">    browseable = yes</span><br><span class="line">    # 可写</span><br><span class="line">    writable = yes</span><br><span class="line">    # 新建文件的权限为 664</span><br><span class="line">    create mask = 0664</span><br><span class="line">    # 新建目录的权限为 775</span><br><span class="line">    directory mask = 0775</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试配置文件是否有错误，根据提示做相应修改"><a href="#测试配置文件是否有错误，根据提示做相应修改" class="headerlink" title="测试配置文件是否有错误，根据提示做相应修改"></a>测试配置文件是否有错误，根据提示做相应修改</h3><blockquote>
+<p>testparm</p>
+</blockquote>
+<p><strong>添加登陆账户并创建密码，必须是 linux 已存在的用户</strong></p>
+<blockquote>
+<p>sudo smbpasswd -a pi</p>
+</blockquote>
+<p><strong>重启 samba 服务</strong></p>
+<blockquote>
+</blockquote>
+<p>sudo /etc/init.d/samba restart</p>
+<hr>
+<h2 id="内网穿透——公网ssh访问树莓派——frp-VPS"><a href="#内网穿透——公网ssh访问树莓派——frp-VPS" class="headerlink" title="内网穿透——公网ssh访问树莓派——frp+VPS"></a>内网穿透——公网ssh访问树莓派——frp+VPS</h2><p>参考文档：<a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">https://github.com/fatedier/frp</a></p>
+<h4 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h4><p>登入VPS</p>
+<blockquote>
+<p>sudo apt-get update #更新源 </p>
+</blockquote>
+<blockquote>
+<p>sudo wget <a href="https://github.com/fatedier/frp/releases/download/v0.25.1/frp_0.25.1_linux_amd64.tar.gz" target="_blank" rel="noopener">https://github.com/fatedier/frp/releases/download/v0.25.1/frp_0.25.1_linux_amd64.tar.gz</a></p>
+</blockquote>
+<blockquote>
+<p>tar -xzvf frp_0.25.1_linux_amd64.tar.gz #解压</p>
+</blockquote>
+<blockquote>
+<p>cd frp_0.25.1_linux_amd64</p>
+</blockquote>
+<p>修改frps.ini</p>
+<blockquote>
+<p>#frps.ini<br>[common]<br>bind_port = 7000</p>
+</blockquote>
+<p>开始frps</p>
+<blockquote>
+<p>./frps -c ./frps.ini</p>
+</blockquote>
+<h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><p>登入raspberry</p>
+<blockquote>
+<p>sudo apt-get update #更新源</p>
+</blockquote>
+<blockquote>
+<p>sudo wget <a href="https://github.com/fatedier/frp/releases/download/v0.25.1/frp_0.25.1_linux_arm.tar.gz" target="_blank" rel="noopener">https://github.com/fatedier/frp/releases/download/v0.25.1/frp_0.25.1_linux_arm.tar.gz</a></p>
+</blockquote>
+<blockquote>
+<p>tar -xzvf frp_0.25.1_linux_amd.tar.gz #解压</p>
+</blockquote>
+<blockquote>
+<p>cd frp_0.25.1_linux_amd</p>
+</blockquote>
+<p>修改frpc.ini，server_addr是你的frps的服务器IP：</p>
+<p>注意vps端口需要在安全组中手动开启，否则ssh将connect refuse</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#frpc.ini </span><br><span class="line">[common] </span><br><span class="line">server_addr = xxxx</span><br><span class="line">server_port = 7000</span><br><span class="line">[ssh] </span><br><span class="line">type = tcp</span><br><span class="line"> local_ip = 127.0.0.1</span><br><span class="line"> local_port = 22</span><br><span class="line"> remote_port = 6000</span><br></pre></td></tr></table></figure>
+
+<p>frpc开始</p>
+<blockquote>
+<p>./frpc -c ./frpc.ini</p>
+</blockquote>
+<p>从外网ssh </p>
+<blockquote>
+<p>ssh -oPort=6000 <a href="mailto:pi@x.x.x.x" target="_blank" rel="noopener">pi@x.x.x.x</a></p>
+</blockquote>
+<h3 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h3><h4 id="客户端-1"><a href="#客户端-1" class="headerlink" title="客户端"></a>客户端</h4><p>首先获取root权限，进入树莓派的systemd目录</p>
+<blockquote>
+<p>cd /lib/systemd/system</p>
+</blockquote>
+<p>新建文件</p>
+<blockquote>
+<p>touch frpc.service</p>
+</blockquote>
+<blockquote>
+<p>vim frpc.service</p>
+</blockquote>
+<p>添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=frpc daemon</span><br><span class="line">After=network.target</span><br><span class="line">[Service]</span><br><span class="line">User=root</span><br><span class="line">Type=simple</span><br><span class="line">ExecStartPre=/bin/sleep 10</span><br><span class="line">ExecStart=frpc文件夹路径/frpc -c frpc文件夹路径/frpc.ini</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>最后使用systemctl将frpc.service启动，同时设置frpc开机自启：</p>
+<blockquote>
+<p>systemctl start frpc<br>systemctl enable  frpc</p>
+</blockquote>
+<h4 id="服务器端-1"><a href="#服务器端-1" class="headerlink" title="服务器端"></a>服务器端</h4><blockquote>
+<p>vim /etc/systemd/system/frps.service</p>
+</blockquote>
+<blockquote>
+<p>[Unit]<br><br>Description=frps daemon<br><br>After=syslog.target network.target<br><br>Wants=network.target<br><br>[Service]<br><br>Type=simple<br><br>ExecStart=frp文件路径/frps -c fpr文件路径/frps_my.ini<br><br>Restart= always<br><br>RestartSec=1min<br><br>[Install]<br><br>WantedBy=multi-user.target<br></p>
+</blockquote>
+<p>启动并设为开机自启。</p>
+<blockquote>
+<p>systemctl start frps //启动<br><br>systemctl status frps //状态查询<br><br>systemctl enable frps //开机启动<br></p>
+</blockquote>
+<blockquote>
+<p>ssh -oPort=6000 <a href="mailto:test@x.x.x.x" target="_blank" rel="noopener">test@x.x.x.x</a></p>
+</blockquote>
+<hr>
+<h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><p>脚本一件安装</p>
+<blockquote>
+<p>curl -sSL <a href="https://get.docker.com" target="_blank" rel="noopener">https://get.docker.com</a> | sh</p>
+</blockquote>
+<p>下载.deb文件</p>
+<blockquote>
+<p><a href="https://apt.dockerproject.org/repo/pool/testing/d/docker-engine/" target="_blank" rel="noopener">https://apt.dockerproject.org/repo/pool/testing/d/docker-engine/</a></p>
+</blockquote>
+<blockquote>
+<p>sudo dpkg -i /path/to/package.deb</p>
+</blockquote>
+<p>docker更换国内源</p>
+<blockquote>
+<p>sudo vim /etc/docker/daemon.json #文件不存在则会创建</p>
+<pre><code>{
+ &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]
+}</code></pre></blockquote>
+<p>重启docker并常驻服务</p>
+<blockquote>
+<pre><code>sudo systemctl restart docker.service 
+sudo systemctl enable docker.service</code></pre></blockquote>
+<p>安装docker图形化UI</p>
+<blockquote>
+<p>sudo docker pull portainer/portainer</p>
+</blockquote>
+<p>输入命令创建ui容器</p>
+<blockquote>
+<p>$ sudo docker run -d -p 9000:9000 –name portainer –restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer</p>
+</blockquote>
+<hr>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Smiley</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wsmiley.github.io/2019/07/19/Raspberrypi/">http://wsmiley.github.io/2019/07/19/Raspberrypi/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wsmiley.github.io">Smiley</a>！</span></div></div><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/07/19/React/"><i class="fa fa-chevron-left">  </i><span>React</span></a></div><div class="next-post pull-right"><a href="/2019/07/19/Nginx-hls-rtmp推流/"><span>Nginx+hls+rtmp推流</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://pic1.zhimg.com/80/v2-d18ff3d84c99c26eb8162be708d4f462_hd.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2019 By Smiley</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">Hi, welcome to my blog</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>

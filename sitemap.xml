@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wsmiley.github.io/2019/07/19/Android/</loc>
+    
+    <lastmod>2019-07-19T07:03:29.729Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wsmiley.github.io/2019/07/19/React/</loc>
+    
+    <lastmod>2019-07-19T07:01:18.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wsmiley.github.io/2019/07/19/Raspberrypi/</loc>
+    
+    <lastmod>2019-07-19T07:00:45.066Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wsmiley.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-07-19T05:54:13.768Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wsmiley.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-07-19T05:45:28.895Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wsmiley.github.io/2019/07/19/Nginx-hls-rtmp%E6%8E%A8%E6%B5%81/</loc>
     
     <lastmod>2019-07-19T05:43:16.620Z</lastmod>
@@ -12,13 +47,6 @@
     <loc>http://wsmiley.github.io/2019/07/19/%E7%90%86%E8%A7%A3PID/</loc>
     
     <lastmod>2019-07-19T05:40:41.088Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wsmiley.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-07-19T05:33:05.028Z</lastmod>
     
   </url>
   
